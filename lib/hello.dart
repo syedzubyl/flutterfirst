@@ -8,6 +8,7 @@ class hello extends StatelessWidget {
     return  Scaffold(
       body:  Column(
         mainAxisAlignment: MainAxisAlignment.start,
+
         children: <Widget>[
           Container(
             height: 400,
@@ -32,7 +33,7 @@ class hello extends StatelessWidget {
                     ),
                   ),
                 ),
-                
+
                 Positioned(
                     left: 150,
                     height: 150,
@@ -79,7 +80,8 @@ class hello extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(8.0),
                 decoration: BoxDecoration(
-                  color: Colors.white,                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
                   boxShadow: const [
                     BoxShadow(
                       color: Color.fromRGBO(143, 148,  251, .2),
@@ -106,12 +108,49 @@ class hello extends StatelessWidget {
                         ),
                       ),
                    ),
-
+                    Container(
+                      padding: const EdgeInsets.all(8.0),
+                      decoration: BoxDecoration(
+                        border: Border(
+                          bottom: BorderSide(
+                            color: Colors.blue.shade100,
+                          )
+                        )
+                      ),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "Enter the Password",
+                          hintStyle: TextStyle(color: Colors.grey.shade400)
+                        ),
+                   ),
+                    )
                   ],
                 ),
               ),
             ],
-          ),)
+          ),),
+          const SizedBox(
+            height: 30,
+          ),
+          Container(
+            height: 50,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              gradient:const LinearGradient(
+               colors: [
+                 Color.fromRGBO(143, 148, 251, 1),
+                 Color.fromRGBO(143, 148, 251, .6),
+               ]
+              )
+            ),
+            child: const Text("Login",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+          ),
+          const SizedBox(height: 70,),
+          const Text("Forgot password",
+            style:TextStyle(
+                color: Colors.purple,
+                fontWeight: FontWeight.bold),)
         ],
       ),
 
